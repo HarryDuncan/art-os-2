@@ -23,11 +23,27 @@ app.on("ready", () => {
 
   // Handle messages from Python
   pythonProcess.stdout.on("data", (data) => {
+    console.log(data);
     const message = data.toString().trim();
-    mainWindow.webContents.send("python-message", message); // Send to renderer
+    try {
+      // Attempt to parse the message as JSON
+      const jsonResponse = JSON.parse(message);
+      console.log(jsonResponse);
+      // Send the parsed JSON to the renderer
+      mainWindow.webContents.send("python-message", jsonResponse);
+    } catch (e) {
+      // If there's an error parsing the JSON, send an error message to the renderer
+      console.error("Error parsing JSON:", e);
+      // Send the raw message to the renderer as error response
+      mainWindow.webContents.send("python-message", {
+        error: "Invalid JSON format",
+        raw: message,
+      });
+    }
   });
 
   pythonProcess.stderr.on("data", (data) => {
+    console.log("error");
     console.error("Python Error:", data.toString());
   });
 
@@ -36,10 +52,7 @@ app.on("ready", () => {
   });
 });
 
-ipcMain.on("renderer-message", (event, message) => {
-  // Serialize the object to JSON string
+ipcMain.on("renderer-message", (_event, message) => {
   const jsonMessage = JSON.stringify(message);
-  console.log(jsonMessage);
-  // Send the JSON string to Python's stdin
   pythonProcess.stdin.write(jsonMessage + "\n");
 });

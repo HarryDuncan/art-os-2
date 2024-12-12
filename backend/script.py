@@ -1,33 +1,46 @@
 import sys
 import json
 
-# Function to process incoming commands
-def process_command(command, data=None):
-    if command == "/say":
-        # Respond with a simple message
-        return f"You said: {data.get('message', 'nothing')}"
-    
-    elif command == "/math/add":
-        # Perform addition
-        numbers = data.get('numbers', [])
-        if isinstance(numbers, list) and all(isinstance(num, (int, float)) for num in numbers):
-            return f"Sum: {sum(numbers)}"
-        return "Error: Invalid numbers for addition"
+import sys
+import json
+import interaction_node.interaction_node as InteractionNode;
 
-    elif command == "/reverse":
-        # Reverse a string
-        text = data.get('text', '')
-        return text[::-1] if isinstance(text, str) else "Error: Invalid text to reverse"
-    
-    elif command == "/echo":
-        # Echo the entire data payload
-        return json.dumps(data)
-    
-    else:
-        # Handle unknown commands
-        return f"Error: Unknown command '{command}'"
+class CommandProcessor:
+    def __init__(self):
+     
+        self.history = []
+        self.interactionNode = None
 
-# Continuously read from stdin
+    def process_command(self, command, data=None):
+        match command:
+            case 'initialize_ipc':
+                return True
+            case 'initialize_interaction_node':
+                self.interactionNode = InteractionNode()
+                self.interactionNode.InitializeInteractionNode()
+                if self.interactionNode != None:
+                    return True
+                else:
+                    return False
+            case 'initialize_algorithm':
+                if self.interactionNode != None:
+                    initialize_algorithm_result = self.interactionNode.InitializeAlgorithm(data)
+                    return initialize_algorithm_result
+                else:
+                    return False
+            case _:
+                return f"Error: Unknown command '{command}'"
+
+    
+
+   
+        
+            
+
+
+command_processor = CommandProcessor()
+
+
 while True:
     try:
         input_data = sys.stdin.readline().strip() 
@@ -39,11 +52,14 @@ while True:
             except json.JSONDecodeError:
                 print("Error: Invalid JSON format", flush=True)
                 continue
-
             # Process the command
             if command:
-                response = process_command(command, data)
-                print(response, flush=True)  # Send response to Electron
+                response = command_processor.process_command(command, data)
+                final_response = {
+                    "command": command,
+                    "response": response
+                }
+                print(final_response, flush=True)  # Send response to Electron
             else:
                 print("Error: Missing 'command' field", flush=True)
         else:

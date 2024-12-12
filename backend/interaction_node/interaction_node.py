@@ -1,6 +1,6 @@
 
 # ALGOS
-import detection.posenet as Posenet
+from .detection import posenet as Posenet
 
 class InteractionNode():
     def __init__(self):
@@ -36,7 +36,7 @@ class InteractionNode():
             return print(f"{request.algorithm_type} not initialized", flush=True)
 
     def RunAlgorithm(self):
-        print(self.currentAlgorithm)
+       
         if(self.currentAlgorithm != None):
             if(self.isRunning == False):
                 self.currentAlgorithm.run_algorithm()

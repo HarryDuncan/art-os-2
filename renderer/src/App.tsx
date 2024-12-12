@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { sendMessage, onMessage } from "./ipc";
+import React, { useState } from "react";
+import { useInitializeIPC } from "./ipc-hooks/useInitialize";
 
 const App = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
-
-  useEffect(() => {
-    onMessage((message) => {
-      setMessages((prev) => [...prev, message]);
-    });
-  }, []);
-
-  const handleSend = () => {
-    const messageData = { command: "/say", data: { message: input } };
-    console.log(messageData);
-    sendMessage(messageData);
-    setInput("");
-  };
-
+  useInitializeIPC();
   return (
     <div style={{ padding: "1rem" }}>
       <h1>Electron-Python IPC with React & TypeScript</h1>
@@ -27,7 +14,7 @@ const App = () => {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Message to Python"
       />
-      <button onClick={handleSend}>Send</button>
+
       <div style={{ marginTop: "1rem" }}>
         <h2>Messages:</h2>
         <pre>{messages.join("\n")}</pre>

@@ -23,18 +23,12 @@ app.on("ready", () => {
 
   // Handle messages from Python
   pythonProcess.stdout.on("data", (data) => {
-    console.log(data);
     const message = data.toString().trim();
     try {
-      // Attempt to parse the message as JSON
       const jsonResponse = JSON.parse(message);
-      console.log(jsonResponse);
-      // Send the parsed JSON to the renderer
       mainWindow.webContents.send("python-message", jsonResponse);
     } catch (e) {
-      // If there's an error parsing the JSON, send an error message to the renderer
       console.error("Error parsing JSON:", e);
-      // Send the raw message to the renderer as error response
       mainWindow.webContents.send("python-message", {
         error: "Invalid JSON format",
         raw: message,

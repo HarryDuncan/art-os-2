@@ -8,7 +8,6 @@ export const onMessage = (
   callback: (message: string) => void
 ) => {
   window.electronAPI?.onMessage((returnedMessage) => {
-    console.log(returnedMessage);
     if (returnedMessage.command === command) {
       callback(returnedMessage);
     }

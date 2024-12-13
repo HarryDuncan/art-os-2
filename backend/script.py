@@ -59,7 +59,8 @@ while True:
                     "command": command,
                     "response": response
                 }
-                print(final_response, flush=True)  # Send response to Electron
+                json_response = json.dumps(final_response)
+                print(json_response, end='', flush=True)  # Send response to Electron
             else:
                 print("Error: Missing 'command' field", flush=True)
         else:

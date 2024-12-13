@@ -3,7 +3,6 @@ import { useInitializeIPC } from "./ipc-hooks/useInitialize";
 
 const App = () => {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<string[]>([]);
   useInitializeIPC();
   return (
     <div style={{ padding: "1rem" }}>
@@ -17,7 +16,6 @@ const App = () => {
 
       <div style={{ marginTop: "1rem" }}>
         <h2>Messages:</h2>
-        <pre>{messages.join("\n")}</pre>
       </div>
     </div>
   );

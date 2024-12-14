@@ -24,6 +24,7 @@ app.on("ready", () => {
   // Handle messages from Python
   pythonProcess.stdout.on("data", (data) => {
     const message = data.toString().trim();
+    console.log(message);
     try {
       const jsonResponse = JSON.parse(message);
       mainWindow.webContents.send("python-message", jsonResponse);

@@ -1,10 +1,12 @@
 import sys
 import json
-
+from collections import namedtuple
 import sys
 import json
-import interaction_node.interaction_node as InteractionNode;
+from interaction_node.interaction_node import InteractionNode;
 
+
+            
 class CommandProcessor:
     def __init__(self):
      
@@ -28,6 +30,9 @@ class CommandProcessor:
                     return initialize_algorithm_result
                 else:
                     return False
+            case 'run_algorithm':
+                if self.interactionNode != None:
+                    self.interactionNode.RunAlgorithm()
             case _:
                 return f"Error: Unknown command '{command}'"
 
@@ -49,12 +54,14 @@ while True:
                 payload = json.loads(input_data)
                 command = payload.get("command")
                 data = payload.get("data", {})
+                DataObject = namedtuple("DataObject", data.keys())
+                obj = DataObject(*data.values())
             except json.JSONDecodeError:
                 print("Error: Invalid JSON format", flush=True)
                 continue
             # Process the command
             if command:
-                response = command_processor.process_command(command, data)
+                response = command_processor.process_command(command, obj)
                 final_response = {
                     "command": command,
                     "response": response

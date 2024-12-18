@@ -1,13 +1,11 @@
 const path = require("path");
 const { app, BrowserWindow, ipcMain } = require("electron");
-const { spawn } = require("child_process");
+const { Worker } = require("worker_threads");
 
 require("electron-reload")(__dirname, {
   electron: path.join(__dirname, "node_modules", ".bin", "electron"), // Ensure Electron reloads when files change
 });
-
-let pythonProcess;
-
+let bodyPixWorker = null;
 app.on("ready", () => {
   // Create the main window
   const mainWindow = new BrowserWindow({
@@ -18,36 +16,47 @@ app.on("ready", () => {
 
   mainWindow.loadURL("http://localhost:3000");
 
-  // Start the Python backend
-  pythonProcess = spawn("python", [__dirname + "/backend/script.py"]);
+  ipcMain.handle("start-bodypix", async (event) => {
+    return new Promise(async (resolve, reject) => {
+      bodyPixWorker = new Worker(
+        path.join(__dirname, "/src/ai-workers/bodypixWorker.js")
+      );
 
-  // Handle messages from Python
-  pythonProcess.stdout.on("data", (data) => {
-    const message = data.toString().trim();
-    console.log(message);
-    try {
-      const jsonResponse = JSON.parse(message);
-      mainWindow.webContents.send("python-message", jsonResponse);
-    } catch (e) {
-      console.error("Error parsing JSON:", e);
-      mainWindow.webContents.send("python-message", {
-        error: "Invalid JSON format",
-        raw: message,
+      bodyPixWorker.on("message", (data) => {
+        if (data.type === "completed") {
+          resolve(data.result); // Send the result back to the renderer
+        }
+        if (data.type === "new-measurement") {
+          event.sender.send("new-measurement", data.result);
+        }
+        if (data.type === "error") {
+          console.log(data.error);
+        }
       });
+
+      bodyPixWorker.on("error", (error) => {
+        console.warn("Error occurred");
+        console.warn(error.message);
+      });
+
+      bodyPixWorker.on("exit", (code) => {
+        if (code !== 0) {
+          reject(new Error(`Worker stopped with exit code ${code}`));
+        }
+        bodyPixWorker = null; // Reset reference when the worker exits
+      });
+
+      bodyPixWorker.postMessage("init");
+    });
+  });
+
+  // Stop the worker when requested
+  ipcMain.handle("stop-bodypix", async () => {
+    if (bodyPixWorker) {
+      bodyPixWorker.postMessage("terminate");
+      bodyPixWorker = null; // Clean up the reference
+      return { success: true };
     }
+    return { success: false, error: "No worker running" };
   });
-
-  pythonProcess.stderr.on("data", (data) => {
-    console.log("error");
-    console.error("Python Error:", data.toString());
-  });
-
-  app.on("will-quit", () => {
-    pythonProcess.kill(); // Ensure the Python process exits with the app
-  });
-});
-
-ipcMain.on("renderer-message", (_event, message) => {
-  const jsonMessage = JSON.stringify(message);
-  pythonProcess.stdin.write(jsonMessage + "\n");
 });

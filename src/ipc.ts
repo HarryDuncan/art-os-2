@@ -8,8 +8,8 @@ export const onMessage = (
   callback: (message: string) => void
 ) => {
   window.electronAPI?.onMessage((returnedMessage) => {
-    if (returnedMessage.command === command) {
-      callback(returnedMessage);
-    }
+    callback(returnedMessage);
   });
 };
+
+export const ipcRenderer = window.electronAPI?.ipcRenderer;

@@ -11,8 +11,8 @@ module.exports = {
   },
   resolve: {
     modules: [
-      path.resolve(__dirname + "/src"),
-      path.resolve(__dirname + "/node_modules"),
+      path.resolve(__dirname, "src"),
+      path.resolve(__dirname, "node_modules"),
     ],
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
@@ -26,10 +26,18 @@ module.exports = {
           options: {
             presets: [
               "@babel/preset-env",
-              "@babel/preset-react",
+              [
+                "@babel/preset-react",
+                {
+                  runtime: "automatic", // Enables the new JSX transform
+                },
+              ],
               "@babel/preset-typescript",
             ],
-            plugins: [require.resolve("react-refresh/babel")],
+            plugins: [
+              process.env.NODE_ENV !== "production" &&
+                require.resolve("react-refresh/babel"),
+            ].filter(Boolean),
           },
         },
       },
@@ -44,15 +52,19 @@ module.exports = {
       ? [new ReactRefreshWebpackPlugin()]
       : []),
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./public/index.html",
     }),
   ],
   devServer: {
-    static: {
-      directory: path.resolve(__dirname, "dist"),
-    },
-    hot: true,
+    static: [
+      {
+        directory: path.join(__dirname, "public"), // Serve 'public' folder statically
+        publicPath: "/", // Make it available at root
+      },
+    ],
+    hot: true, // Enable hot reloading
     port: 3000,
     open: true,
+    historyApiFallback: true, // Useful for single-page applications
   },
 };

@@ -1,0 +1,10 @@
+[
+  {
+    "url": "scene-configs/defaults/video-filter.json",
+    "label": "Video Filter"
+  },
+  {
+    "url": "scene-configs/installations/pitch-scene.json",
+    "label": "Pitch Scene"
+  }
+]

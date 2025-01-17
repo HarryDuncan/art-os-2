@@ -1,12 +1,12 @@
 import { useKeyListener, WindowStateProvider } from "art-os-package";
-
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { ViewWrapper } from "components/view-wrapper/ViewWrapper";
+import { ViewWrapper } from "views/view-wrapper/ViewWrapper";
 import { KEYS, VIEW_TYPES } from "consts/views.consts";
 import { Container } from "views/Container";
 import { useCallback } from "react";
 import { AppProvider, useAppContext } from "context/app.context";
 import { GeometryPreprocess } from "views/asset-editor/GeometryPreprocess";
+import { VideoFilter } from "views/VideoFilter";
 
 const App = () => {
   return (
@@ -28,10 +28,7 @@ const AppContent = () => {
             path="/interactive"
             element={<ViewWrapper sceneType={VIEW_TYPES.INTERACTIVE} />}
           />
-          <Route
-            path="/video-filter"
-            element={<ViewWrapper sceneType={VIEW_TYPES.VIDEO_FILTER} />}
-          />
+          <Route path="/video-filter" element={<VideoFilter />} />
           <Route
             path="/p5"
             element={<ViewWrapper sceneType={VIEW_TYPES.P5} />}

@@ -1,7 +1,8 @@
 [
   {
     "url": "scene-configs/defaults/video-filter.json",
-    "label": "Video Filter"
+    "label": "Video Filter",
+    "tags": ["VIDEO_FILTER"]
   },
   {
     "url": "scene-configs/installations/pitch-scene.json",

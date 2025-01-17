@@ -1,19 +1,16 @@
-import React, { ReactNode, useState } from "react";
-import { FullScreenContainer } from "../../views/digital-art/StyledComponents";
+import React, { ReactNode, useCallback, useState } from "react";
 import { UPLOAD_RETURN_TYPES } from "./AssetFileUpload.consts";
 
 interface FileDropProps {
-  children: ReactNode;
   onFileLoad: (fileContent: string | any) => void;
   returnType?: string;
 }
 
 export const AssetFileUpload: React.FC<FileDropProps> = ({
-  children,
   onFileLoad,
   returnType = UPLOAD_RETURN_TYPES.FILE,
 }) => {
-  const [isDragging, setIsDragging] = useState(false);
+  const [isDragOver, setIsDragging] = useState(false);
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -28,7 +25,7 @@ export const AssetFileUpload: React.FC<FileDropProps> = ({
     e.preventDefault();
     setIsDragging(false);
     const file = e.dataTransfer.files[0];
-    console.log(file);
+
     if (file) {
       switch (returnType) {
         case UPLOAD_RETURN_TYPES.FILE:
@@ -57,17 +54,20 @@ export const AssetFileUpload: React.FC<FileDropProps> = ({
     });
   };
 
+  const onFileInputChange = useCallback((value) => {
+    console.log(value);
+  }, []);
   return (
-    <FullScreenContainer
+    <div
+      className={`add-file-container ${isDragOver ? "drag-over" : ""}`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
-      style={{
-        border: isDragging ? "2px dashed #2196F3" : "2px dashed #ccc",
-        padding: "20px",
-      }}
     >
-      {children}
-    </FullScreenContainer>
+      <input type="file" onChange={}>
+        {" "}
+        Drag or click here to upload files
+      </input>
+    </div>
   );
 };

@@ -9,6 +9,7 @@ let bodyPixWorker = null;
 app.on("ready", () => {
   // Create the main window
   const mainWindow = new BrowserWindow({
+    autoHideMenuBar: true,
     webPreferences: {
       preload: __dirname + "/preload.js",
     },

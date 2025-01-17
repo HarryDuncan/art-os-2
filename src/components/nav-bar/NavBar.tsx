@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const SITE_LINKS = [
   { title: "INTERACTIVE", url: "/interactive" },
   { title: "VIDEO FILTER", url: "/video-filter" },
+  { title: "P5", url: "/p5" },
+  { title: "Asset Editor", url: "/asset-editor" },
 ];
 
 export const NavBar = () => {

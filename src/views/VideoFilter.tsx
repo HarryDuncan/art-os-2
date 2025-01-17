@@ -17,6 +17,8 @@ export const VideoFilter = ({ sceneConfig }: VideoFilterProps) => {
     areAssetsInitialized
   );
 
+  console.log(sceneData);
+
   return (
     <div>
       {sceneData && areAssetsInitialized && (

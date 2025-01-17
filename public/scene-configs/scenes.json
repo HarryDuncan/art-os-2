@@ -6,5 +6,9 @@
   {
     "url": "scene-configs/installations/pitch-scene.json",
     "label": "Pitch Scene"
+  },
+  {
+    "url": "scene-configs/scenes/morph.json",
+    "label": "Model Morph"
   }
 ]

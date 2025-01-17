@@ -4,8 +4,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { ViewWrapper } from "components/view-wrapper/ViewWrapper";
 import { KEYS, VIEW_TYPES } from "consts/views.consts";
 import { Container } from "views/Container";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { AppProvider, useAppContext } from "context/app.context";
+import { GeometryPreprocess } from "views/asset-editor/GeometryPreprocess";
 
 const App = () => {
   return (
@@ -31,6 +32,11 @@ const AppContent = () => {
             path="/video-filter"
             element={<ViewWrapper sceneType={VIEW_TYPES.VIDEO_FILTER} />}
           />
+          <Route
+            path="/p5"
+            element={<ViewWrapper sceneType={VIEW_TYPES.P5} />}
+          />
+          <Route path="/asset-editor" element={<GeometryPreprocess />} />
         </Routes>
       </Container>
     </Router>

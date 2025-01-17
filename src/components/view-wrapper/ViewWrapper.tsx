@@ -6,6 +6,7 @@ import { VIEW_TYPES } from "consts/views.consts";
 import { useAppContext } from "context/app.context";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { InteractiveView } from "views/interactive";
+import { P5Container } from "views/P5Container";
 import { VideoFilter } from "views/VideoFilter";
 
 interface ViewWrapperProps {
@@ -48,6 +49,8 @@ const ViewChild = ({ sceneType, sceneConfig }: ViewChildProps) => {
       return <InteractiveView sceneConfig={sceneConfig} />;
     case VIEW_TYPES.VIDEO_FILTER:
       return <VideoFilter sceneConfig={sceneConfig} />;
+    case VIEW_TYPES.P5:
+      return <P5Container />;
     default:
       return null;
   }

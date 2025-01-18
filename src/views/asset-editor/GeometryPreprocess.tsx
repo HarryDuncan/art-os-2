@@ -16,15 +16,15 @@ const preTransformConfig = {
 
 const ASSETS = [
   {
-    id: "side-obj",
-    name: "side-obj",
-    url: "../assets/models/side-obj.obj",
+    id: "jizz",
+    name: "jizz",
+    url: "../assets/models/Jizz.obj",
     assetType: "MODEL3D",
   },
   {
-    id: "jason",
-    name: "jason",
-    url: "../assets/models/simplified_output.obj",
+    id: "barba",
+    name: "barba",
+    url: "../assets/models/barba.obj",
     assetType: "MODEL3D",
   },
 ];

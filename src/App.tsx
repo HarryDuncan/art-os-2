@@ -34,7 +34,7 @@ const AppContent = () => {
             element={<ViewWrapper viewId={VIEW_TYPES.INTERACTIVE} />}
           />
           <Route path="/video-filter" element={<VideoFilter />} />
-          <Route path="/p5" element={<ViewWrapper viewId={VIEW_TYPES.P5} />} />
+
           <Route path="/asset-editor" element={<GeometryPreprocess />} />
         </Routes>
       </Container>

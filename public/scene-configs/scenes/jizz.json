@@ -1,0 +1,354 @@
+[
+  {
+    "sceneTitle": "JIZZ-1",
+    "sceneConfigType": "Master",
+    "threeJsConfig": {
+      "camera": { "position": { "x": 0, "y": 4, "z": 450 } }
+    },
+    "assets": [
+      {
+        "name": "sperm-texture",
+        "url": "../assets/textures/point-textures/sperm.png",
+        "assetType": "TEXTURE",
+        "id": "sperm-texture"
+      },
+
+      {
+        "assetType": "TEXTURE",
+        "id": "image",
+        "name": "image",
+        "url": "../assets/textures/plain-bg.jpg"
+      },
+      {
+        "assetType": "VIDEO",
+        "id": "video",
+        "name": "video",
+        "url": "../assets/video/forest.mp4"
+      }
+    ],
+    "meshComponentConfigs": [
+      {
+        "id": "geometry-2",
+        "geometryId": "EMPTY",
+        "meshType": "POINTS",
+        "geometryConfig": {
+          "scale": 1
+        },
+        "position": { "x": 0, "y": 0, "z": -20 },
+        "rotation": { "x": 0, "y": 0, "z": -0 },
+        "materialId": "morphing-material"
+      }
+    ],
+    "animationConfig": [
+      {
+        "animationId": "morph-geometry-2",
+        "targetIdentifier": "geometry-2",
+        "animationFunctionType": "UTIME",
+        "animationProperties": {
+          "animationDurationMilis": 24000,
+          "animationPauseMilis": 0,
+          "repeatAnimation": true,
+          "animationLoopConfig": []
+        }
+      }
+    ],
+    "lightConfig": [
+      {
+        "name": "ambient-light",
+        "lightType": "AMBIENT",
+        "props": { "intensity": 1.0 }
+      },
+      {
+        "name": "point-light",
+        "lightType": "POINT_LIGHT",
+        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+      },
+      {
+        "name": "point-lightd",
+        "lightType": "DIRECTIONAL_LIGHT",
+        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+      }
+    ],
+    "globalMaterialConfigs": [
+      {
+        "id": "morphing-material",
+        "materialType": "BUILT_SHADER",
+        "blendingConfig": {
+          "transparent": true,
+          "depthTest": true
+        },
+        "builtShaderConfig": {
+          "uniformConfig": {
+            "defaultUniforms": [],
+            "customUniforms": [
+              { "id": "uRandom", "valueType": "FLOAT", "value": 1.0 },
+              { "id": "uSize", "valueType": "FLOAT", "value": 15.5 },
+              { "id": "uDepth", "valueType": "FLOAT", "value": 1.0 },
+              { "id": "uTextureSize", "valueType": "VEC2" },
+              { "id": "uTexture", "valueType": "SAMPLER2D" },
+              { "id": "uOverlayTexture", "valueType": "SAMPLER2D" }
+            ]
+          },
+          "vertexEffectConfigs": [
+            {
+              "effectType": "POINTS",
+              "effectProps": {}
+            },
+            {
+              "effectType": "VERTEX_IMAGE_EFFECT",
+              "effectProps": {
+                "effectType": "IMAGE_TO_POINT"
+              }
+            }
+          ],
+          "fragmentEffectConfigs": [
+            {
+              "effectType": "POINT_MATERIAL",
+              "effectProps": {
+                "pointDisplayPercentage": 0.12,
+                "pointTextures": [
+                  { "id": "uTextureSperm", "pointColor": "##00a6ff" }
+                ],
+                "pointColor": "#ffffff",
+                "defaultColor": "#00a6ff",
+                "effectType": "PIXEL_COLOR",
+                "effectProps": {}
+              }
+            }
+          ],
+          "attributeConfig": [
+            {
+              "id": "pointDisplay",
+              "valueType": "FLOAT",
+              "assetId": "image",
+              "valueConfig": { "randomizedPercentage": 0.321021 }
+            },
+            {
+              "id": "pointIndex",
+              "valueType": "FLOAT",
+              "assetId": "image"
+            },
+            {
+              "id": "position",
+              "valueType": "VEC3",
+              "assetId": "image"
+            },
+            {
+              "id": "pointOffset",
+              "valueType": "VEC3",
+              "assetId": "image"
+            }
+          ]
+        },
+        "assetMapping": [
+          {
+            "uniform": "uTextureSperm",
+            "assetId": "sperm-texture",
+            "relationship": "TEXTURE"
+          },
+
+          {
+            "uniform": "uTexture",
+            "assetId": "video",
+            "relationship": "VIDEO"
+          },
+          {
+            "uniform": "uTextureSize",
+            "assetId": "image",
+            "relationship": "DIMENSION"
+          }
+        ]
+      }
+    ],
+    "meshTransforms": [
+      {
+        "type": "PRE_DEFINED",
+        "transformedMeshIds": ["geometry-2"],
+        "materialId": "morphing-material"
+      },
+      {
+        "type": "CUSTOM_ATTRIBUTES",
+        "transformedMeshIds": ["geometry-2"],
+        "materialId": "morphing-material"
+      }
+    ],
+    "sceneComponentConfigs": [],
+    "scenePropertiesConfig": { "backgroundColor": "black" }
+  },
+  {
+    "sceneTitle": "JIZZ-1",
+    "sceneConfigType": "Master",
+    "threeJsConfig": {
+      "camera": { "position": { "x": 0, "y": 4, "z": 450 } }
+    },
+    "assets": [
+      {
+        "name": "sperm-texture",
+        "url": "../assets/textures/point-textures/sperm.png",
+        "assetType": "TEXTURE",
+        "id": "sperm-texture"
+      },
+
+      {
+        "assetType": "TEXTURE",
+        "id": "image",
+        "name": "image",
+        "url": "../assets/textures/plain-bg.jpg"
+      },
+      {
+        "assetType": "VIDEO",
+        "id": "video",
+        "name": "video",
+        "url": "../assets/video/forest.mp4"
+      }
+    ],
+    "meshComponentConfigs": [
+      {
+        "id": "geometry-2",
+        "geometryId": "EMPTY",
+        "meshType": "POINTS",
+        "geometryConfig": {
+          "scale": 1
+        },
+        "position": { "x": 0, "y": 0, "z": -20 },
+        "rotation": { "x": 0, "y": 0, "z": -0 },
+        "materialId": "morphing-material"
+      }
+    ],
+    "animationConfig": [
+      {
+        "animationId": "morph-geometry-2",
+        "targetIdentifier": "geometry-2",
+        "animationFunctionType": "UTIME",
+        "animationProperties": {
+          "animationDurationMilis": 24000,
+          "animationPauseMilis": 0,
+          "repeatAnimation": true,
+          "animationLoopConfig": []
+        }
+      }
+    ],
+    "lightConfig": [
+      {
+        "name": "ambient-light",
+        "lightType": "AMBIENT",
+        "props": { "intensity": 1.0 }
+      },
+      {
+        "name": "point-light",
+        "lightType": "POINT_LIGHT",
+        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+      },
+      {
+        "name": "point-lightd",
+        "lightType": "DIRECTIONAL_LIGHT",
+        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+      }
+    ],
+    "globalMaterialConfigs": [
+      {
+        "id": "morphing-material",
+        "materialType": "BUILT_SHADER",
+        "blendingConfig": {
+          "transparent": true,
+          "depthTest": true
+        },
+        "builtShaderConfig": {
+          "uniformConfig": {
+            "defaultUniforms": [],
+            "customUniforms": [
+              { "id": "uRandom", "valueType": "FLOAT", "value": 1.0 },
+              { "id": "uSize", "valueType": "FLOAT", "value": 15.5 },
+              { "id": "uDepth", "valueType": "FLOAT", "value": 1.0 },
+              { "id": "uTextureSize", "valueType": "VEC2" },
+              { "id": "uTexture", "valueType": "SAMPLER2D" },
+              { "id": "uOverlayTexture", "valueType": "SAMPLER2D" }
+            ]
+          },
+          "vertexEffectConfigs": [
+            {
+              "effectType": "POINTS",
+              "effectProps": {}
+            },
+            {
+              "effectType": "VERTEX_IMAGE_EFFECT",
+              "effectProps": {
+                "effectType": "IMAGE_TO_POINT"
+              }
+            }
+          ],
+          "fragmentEffectConfigs": [
+            {
+              "effectType": "POINT_MATERIAL",
+              "effectProps": {
+                "pointDisplayPercentage": 0.12,
+                "pointTextures": [
+                  { "id": "uTextureSperm", "pointColor": "##00a6ff" }
+                ],
+                "pointColor": "#ffffff",
+                "defaultColor": "#00a6ff",
+                "effectType": "PIXEL_COLOR",
+                "effectProps": {}
+              }
+            }
+          ],
+          "attributeConfig": [
+            {
+              "id": "pointDisplay",
+              "valueType": "FLOAT",
+              "assetId": "image",
+              "valueConfig": { "randomizedPercentage": 0.321021 }
+            },
+            {
+              "id": "pointIndex",
+              "valueType": "FLOAT",
+              "assetId": "image"
+            },
+            {
+              "id": "position",
+              "valueType": "VEC3",
+              "assetId": "image"
+            },
+            {
+              "id": "pointOffset",
+              "valueType": "VEC3",
+              "assetId": "image"
+            }
+          ]
+        },
+        "assetMapping": [
+          {
+            "uniform": "uTextureSperm",
+            "assetId": "sperm-texture",
+            "relationship": "TEXTURE"
+          },
+
+          {
+            "uniform": "uTexture",
+            "assetId": "video",
+            "relationship": "VIDEO"
+          },
+          {
+            "uniform": "uTextureSize",
+            "assetId": "image",
+            "relationship": "DIMENSION"
+          }
+        ]
+      }
+    ],
+    "meshTransforms": [
+      {
+        "type": "PRE_DEFINED",
+        "transformedMeshIds": ["geometry-2"],
+        "materialId": "morphing-material"
+      },
+      {
+        "type": "CUSTOM_ATTRIBUTES",
+        "transformedMeshIds": ["geometry-2"],
+        "materialId": "morphing-material"
+      }
+    ],
+    "sceneComponentConfigs": [],
+    "scenePropertiesConfig": { "backgroundColor": "black" }
+  }
+]

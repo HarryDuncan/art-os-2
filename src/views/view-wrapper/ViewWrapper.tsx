@@ -5,7 +5,6 @@ import { VIEW_TYPES } from "consts/views.consts";
 import { useAppContext } from "context/app.context";
 import { useSceneConfigs } from "views/hooks/useSceneConfigs";
 import { InteractiveView } from "views/interactive";
-import { P5Container } from "views/P5Container";
 
 interface ViewWrapperProps {
   viewId: string;
@@ -43,8 +42,7 @@ const ViewChild = ({ viewId, sceneConfig }: ViewChildProps) => {
   switch (viewId) {
     case VIEW_TYPES.INTERACTIVE:
       return <InteractiveView sceneConfig={sceneConfig} />;
-    case VIEW_TYPES.P5:
-      return <P5Container />;
+
     default:
       return null;
   }

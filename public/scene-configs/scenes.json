@@ -5,6 +5,16 @@
     "tags": ["VIDEO_FILTER"]
   },
   {
+    "url": "scene-configs/scenes/jizz.json",
+    "label": "JIZZ",
+    "tags": ["VIDEO_FILTER"]
+  },
+  {
+    "url": "scene-configs/morph/jizz.json",
+    "label": "JIZZ MORPH",
+    "tags": ["MORPH"]
+  },
+  {
     "url": "scene-configs/installations/pitch-scene.json",
     "label": "Pitch Scene"
   },

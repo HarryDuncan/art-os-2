@@ -1,10 +1,12 @@
 import { useCallback, useMemo, useState } from "react";
 import { useMasterConfig } from "./useMasterConfig";
 import { ComboboxItem } from "@mantine/core";
+import { useAppContext } from "context/app.context";
 
 const MASTER_CONFIG = "scene-configs/scenes.json";
 
-export const useSceneConfigs = (tagFilters?: string[]) => {
+export const useSceneConfigs = (viewId, tagFilters?: string[]) => {
+  const { dispatch } = useAppContext();
   const masterConfig = useMasterConfig(MASTER_CONFIG);
   const [selectedSceneConfigUrl, setSelectedScene] = useState<string>("");
   const selectableConfigs = useMemo(() => {
@@ -23,8 +25,15 @@ export const useSceneConfigs = (tagFilters?: string[]) => {
   const onSelect = useCallback(
     (_value: string | null, option: ComboboxItem) => {
       setSelectedScene(option.value);
+      dispatch({
+        type: "UPDATE_VIEW_STATE",
+        payload: {
+          viewId,
+          viewStateData: { selectedSceneConfigUrl: option.value },
+        },
+      });
     },
-    [masterConfig, setSelectedScene]
+    [masterConfig, setSelectedScene, dispatch]
   );
   return { selectableConfigs, onSelect, selectedSceneConfigUrl };
 };

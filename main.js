@@ -6,6 +6,7 @@ require("electron-reload")(__dirname, {
   electron: path.join(__dirname, "node_modules", ".bin", "electron"), // Ensure Electron reloads when files change
 });
 let bodyPixWorker = null;
+
 app.on("ready", () => {
   // Create the main window
   const mainWindow = new BrowserWindow({

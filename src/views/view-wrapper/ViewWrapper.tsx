@@ -8,15 +8,15 @@ import { InteractiveView } from "views/interactive";
 import { P5Container } from "views/P5Container";
 
 interface ViewWrapperProps {
-  sceneType: string;
+  viewId: string;
 }
 
-export const ViewWrapper = ({ sceneType }: ViewWrapperProps) => {
+export const ViewWrapper = ({ viewId }: ViewWrapperProps) => {
   const {
     state: { isViewFullScreen },
   } = useAppContext();
   const { onSelect, selectableConfigs, selectedSceneConfigUrl } =
-    useSceneConfigs();
+    useSceneConfigs(viewId);
 
   const sceneConfig = useFetchConfig(selectedSceneConfigUrl);
   return (
@@ -30,19 +30,17 @@ export const ViewWrapper = ({ sceneType }: ViewWrapperProps) => {
         />
       )}
 
-      {sceneConfig && (
-        <ViewChild sceneType={sceneType} sceneConfig={sceneConfig} />
-      )}
+      {sceneConfig && <ViewChild viewId={viewId} sceneConfig={sceneConfig} />}
     </div>
   );
 };
 
 interface ViewChildProps {
-  sceneType: string;
+  viewId: string;
   sceneConfig: SceneConfig[];
 }
-const ViewChild = ({ sceneType, sceneConfig }: ViewChildProps) => {
-  switch (sceneType) {
+const ViewChild = ({ viewId, sceneConfig }: ViewChildProps) => {
+  switch (viewId) {
     case VIEW_TYPES.INTERACTIVE:
       return <InteractiveView sceneConfig={sceneConfig} />;
     case VIEW_TYPES.P5:

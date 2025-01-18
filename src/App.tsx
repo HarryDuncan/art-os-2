@@ -6,13 +6,18 @@ import { Container } from "views/Container";
 import { useCallback } from "react";
 import { AppProvider, useAppContext } from "context/app.context";
 import { GeometryPreprocess } from "views/asset-editor/GeometryPreprocess";
-import { VideoFilter } from "views/VideoFilter";
+import { VideoFilter } from "views/video-filter/VideoFilter";
+import { GlobalStyle, THEME } from "theme";
+import { ThemeProvider } from "styled-components";
 
 const App = () => {
   return (
     <WindowStateProvider>
       <AppProvider>
-        <AppContent />
+        <ThemeProvider theme={THEME}>
+          <GlobalStyle />
+          <AppContent />
+        </ThemeProvider>
       </AppProvider>
     </WindowStateProvider>
   );
@@ -26,13 +31,10 @@ const AppContent = () => {
         <Routes>
           <Route
             path="/interactive"
-            element={<ViewWrapper sceneType={VIEW_TYPES.INTERACTIVE} />}
+            element={<ViewWrapper viewId={VIEW_TYPES.INTERACTIVE} />}
           />
           <Route path="/video-filter" element={<VideoFilter />} />
-          <Route
-            path="/p5"
-            element={<ViewWrapper sceneType={VIEW_TYPES.P5} />}
-          />
+          <Route path="/p5" element={<ViewWrapper viewId={VIEW_TYPES.P5} />} />
           <Route path="/asset-editor" element={<GeometryPreprocess />} />
         </Routes>
       </Container>

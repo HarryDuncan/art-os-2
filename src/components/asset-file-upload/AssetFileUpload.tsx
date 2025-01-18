@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { UPLOAD_RETURN_TYPES } from "./AssetFileUpload.consts";
 
 interface FileDropProps {
@@ -54,9 +54,16 @@ export const AssetFileUpload: React.FC<FileDropProps> = ({
     });
   };
 
-  const onFileInputChange = useCallback((value) => {
-    console.log(value);
-  }, []);
+  const onFileInputChange = useCallback(
+    (fileInputEvent) => {
+      const files = fileInputEvent.target.files;
+      if (files) {
+        onFileLoad(files);
+      }
+    },
+    [onFileLoad]
+  );
+
   return (
     <div
       className={`add-file-container ${isDragOver ? "drag-over" : ""}`}
@@ -64,10 +71,7 @@ export const AssetFileUpload: React.FC<FileDropProps> = ({
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
-      <input type="file" onChange={}>
-        {" "}
-        Drag or click here to upload files
-      </input>
+      <input type="file" onChange={onFileInputChange} />
     </div>
   );
 };

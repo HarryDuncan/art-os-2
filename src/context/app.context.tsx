@@ -18,7 +18,12 @@ export type AppActions =
   | {
       type: "UPDATE_VIEW_STATE";
       payload: { viewId: string; viewStateData: Partial<ViewState> };
-    };
+    }
+  | {
+      type: "UPDATE_UPLOADED_ASSETS";
+      payload: { viewId: string; assetId: string; path: string };
+    }
+  | { type: "TOGGLE_PLAY_PAUSE"; payload: { viewId: string } };
 
 type AppContextType = {
   state: AppState;
@@ -43,7 +48,35 @@ const reducer = (state: AppState, action: AppActions) => {
         viewStates: { ...state.viewStates, [viewId]: updatedViewData },
       };
     }
+    case "UPDATE_UPLOADED_ASSETS": {
+      const { viewId, assetId, path } = action.payload;
+      const updatedViewData = state.viewStates[viewId]
+        ? state.viewStates[viewId]
+        : { uploadedAssets: {} };
+      const uploadedAssets = updatedViewData.uploadedAssets
+        ? { ...updatedViewData.uploadedAssets }
+        : {};
+      uploadedAssets[assetId] = path;
 
+      return {
+        ...state,
+        viewStates: {
+          ...state.viewStates,
+          [viewId]: { ...updatedViewData, uploadedAssets },
+        },
+      };
+    }
+    case "TOGGLE_PLAY_PAUSE": {
+      const { viewId } = action.payload;
+      const isPlaying = state.viewStates[viewId]?.isPlaying ?? false;
+      const updatedViewData = state.viewStates[viewId]
+        ? { ...state.viewStates[viewId], isPlaying: !isPlaying }
+        : { isPlaying: !isPlaying };
+      return {
+        ...state,
+        viewStates: { ...state.viewStates, [viewId]: updatedViewData },
+      };
+    }
     default:
       return state;
   }

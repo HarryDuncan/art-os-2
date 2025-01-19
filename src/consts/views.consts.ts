@@ -1,6 +1,7 @@
 export const VIEW_TYPES = {
   INTERACTIVE: "INTERACTIVE",
   VIDEO_FILTER: "VIDEO_FILTER",
+  VIEW_SCENE: "VIEW_SCENE",
 };
 
 export const KEYS = {

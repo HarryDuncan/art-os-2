@@ -82,7 +82,7 @@
             "defaultUniforms": [],
             "customUniforms": [
               { "id": "uRandom", "valueType": "FLOAT", "value": 1.0 },
-              { "id": "uSize", "valueType": "FLOAT", "value": 15.5 },
+              { "id": "uSize", "valueType": "FLOAT", "value": 35.5 },
               { "id": "uDepth", "valueType": "FLOAT", "value": 1.0 },
               { "id": "uTextureSize", "valueType": "VEC2" },
               { "id": "uTexture", "valueType": "SAMPLER2D" },
@@ -121,7 +121,7 @@
               "id": "pointDisplay",
               "valueType": "FLOAT",
               "assetId": "image",
-              "valueConfig": { "randomizedPercentage": 0.321021 }
+              "valueConfig": { "randomizedPercentage": 0.21021 }
             },
             {
               "id": "pointIndex",

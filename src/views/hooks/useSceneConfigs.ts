@@ -5,16 +5,17 @@ import { useAppContext } from "context/app.context";
 
 const MASTER_CONFIG = "scene-configs/scenes.json";
 
-export const useSceneConfigs = (viewId, tagFilters?: string[]) => {
+export const useSceneConfigs = (viewId, configTagFilters?: string[]) => {
   const { dispatch } = useAppContext();
   const masterConfig = useMasterConfig(MASTER_CONFIG);
   const [selectedSceneConfigUrl, setSelectedScene] = useState<string>("");
   const selectableConfigs = useMemo(() => {
     if (masterConfig?.length) {
       return masterConfig.flatMap(({ label, url, tags = [] }) =>
-        (tagFilters?.length && tagFilters.some((tag) => tags.includes(tag))) ||
-        !tagFilters?.length ||
-        !tagFilters
+        (configTagFilters?.length &&
+          configTagFilters.some((tag) => tags.includes(tag))) ||
+        !configTagFilters?.length ||
+        !configTagFilters
           ? { label, value: url }
           : []
       );

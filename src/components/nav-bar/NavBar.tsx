@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const SITE_LINKS = [
   { title: "INTERACTIVE", url: "/interactive" },
   { title: "VIDEO FILTER", url: "/video-filter" },
-  { title: "P5", url: "/p5" },
+  { title: "VIEW SCENE", url: "/view-scene" },
   { title: "Asset Editor", url: "/asset-editor" },
 ];
 

@@ -11,7 +11,7 @@ export const useUploadedAssets = (
     if (!sceneConfig) {
       return null;
     }
-    console.log("test");
+
     const assets = sceneConfig.assets?.map((asset) => {
       if (uploadedAssets) {
         const selectedAsset = uploadedAssets[asset.id];

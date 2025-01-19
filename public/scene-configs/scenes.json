@@ -16,7 +16,8 @@
   },
   {
     "url": "scene-configs/installations/pitch-scene.json",
-    "label": "Pitch Scene"
+    "label": "Pitch Scene",
+    "tags": ["INTERACTIVE"]
   },
   {
     "url": "scene-configs/scenes/morph.json",

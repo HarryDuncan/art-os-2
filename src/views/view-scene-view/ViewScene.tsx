@@ -1,31 +1,30 @@
 import { SceneNode, useAssets, useSceneData } from "art-os-package";
 import { SceneConfig } from "art-os-package/src/config/config.types";
-import { VideoFilterToolBar } from "./VideoFilterToolBar";
+
 import { VIEW_TYPES } from "consts/views.consts";
 
 import { useLoadSceneConfig } from "hooks/useLoadSceneConfig";
+import { ViewSceneToolBar } from "./ViewSceneToolBar";
 
-export const VideoFilter = () => {
-  const { sceneConfig, isPlaying } = useLoadSceneConfig(
-    VIEW_TYPES.VIDEO_FILTER
-  );
+export const ViewScene = () => {
+  const { sceneConfig, isPlaying } = useLoadSceneConfig(VIEW_TYPES.VIEW_SCENE);
   console.log(sceneConfig);
 
   return (
     <div className="view-container">
-      <VideoFilterToolBar />
+      <ViewSceneToolBar />
       {sceneConfig && isPlaying && (
-        <VideoFilterContent sceneConfig={sceneConfig} />
+        <ViewSceneContent sceneConfig={sceneConfig} />
       )}
     </div>
   );
 };
 
-interface VideoFilterProps {
+interface ViewSceneProps {
   sceneConfig: SceneConfig;
 }
 
-const VideoFilterContent = ({ sceneConfig }: VideoFilterProps) => {
+const ViewSceneContent = ({ sceneConfig }: ViewSceneProps) => {
   const { areAssetsInitialized, initializedAssets } = useAssets(
     sceneConfig.assets
   );

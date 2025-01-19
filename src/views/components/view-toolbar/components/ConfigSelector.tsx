@@ -20,7 +20,7 @@ export const ConfigSelector = ({
         key={"video-filter-configs"}
         data={selectableConfigs}
         onChange={onSelect}
-        label={"Select A Scene"}
+        label={"Select A Scene Config"}
       />
     </TopBarItem>
   );

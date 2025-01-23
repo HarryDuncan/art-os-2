@@ -15,7 +15,7 @@ app.on("ready", () => {
       preload: __dirname + "/preload.js",
     },
   });
-
+  mainWindow.loadURL("http://127.0.0.1:8000/");
   mainWindow.loadURL("http://localhost:3000");
 
   ipcMain.handle("start-bodypix", async (event) => {
@@ -61,4 +61,10 @@ app.on("ready", () => {
     }
     return { success: false, error: "No worker running" };
   });
+});
+
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
+    app.quit();
+  }
 });

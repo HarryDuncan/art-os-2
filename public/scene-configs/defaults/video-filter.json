@@ -101,7 +101,7 @@
             "defaultUniforms": [],
             "customUniforms": [
               { "id": "uRandom", "valueType": "FLOAT", "value": 1.0 },
-              { "id": "uSize", "valueType": "FLOAT", "value": 10.5 },
+              { "id": "uSize", "valueType": "FLOAT", "value": 30.5 },
               { "id": "uDepth", "valueType": "FLOAT", "value": 1.0 },
               { "id": "uTextureSize", "valueType": "VEC2" },
               { "id": "uTexture", "valueType": "SAMPLER2D" },

@@ -11,9 +11,9 @@ interface DropdownProps extends InputProps {
 
 // Styled wrapper for the Dropdown
 const StyledSelect = styled(Select)`
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 
-  /* Example styling: Add more customization as needed */
   .mantine-Select-input {
     position: relative;
     border: 2px solid #ccc;

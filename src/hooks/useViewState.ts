@@ -3,6 +3,8 @@ import { useMemo } from "react";
 
 const DEFAULT_EMPTY_VIEW_STATE = {
   sceneConfig: null,
+  interactionConfig: null,
+  selectedInteractionConfigUrl: null,
   selectedSceneConfigUrl: null,
   configLength: 0,
   configIndex: -1,

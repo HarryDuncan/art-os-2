@@ -1,12 +1,12 @@
 import cv2
 from flask import Flask, render_template, Response
 import threading
-
+from flask_cors import CORS
 from segment_filter import segment_frame
 
 # Initialize Flask app
 app = Flask(__name__)
-
+CORS(app)
 # Global variables
 outputFrame = None
 lock = threading.Lock()
@@ -57,7 +57,7 @@ def index():
 
 @app.route("/video_feed")
 def video_feed():
-    print('Did this')
+   
     # Serve the MJPEG stream
     return Response(generate(),
                     mimetype="multipart/x-mixed-replace; boundary=frame")

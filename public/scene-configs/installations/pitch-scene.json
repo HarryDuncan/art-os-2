@@ -2,32 +2,25 @@
   {
     "sceneConfigType": "Master",
     "threeJsConfig": {
-      "camera": { "position": { "x": 0, "y": 4, "z": 950 } }
+      "camera": { "position": { "x": 0, "y": 4, "z": 450 } }
     },
     "assets": [
       {
-        "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
-        "assetType": "TEXTURE",
-        "id": "chrome-material",
-        "assetTag": ["MATCAP"]
-      },
-      {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "url": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "url": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       },
       {
-        "assetType": "TEXTURE",
         "id": "image",
         "name": "image",
+        "assetType": "TEXTURE",
         "url": "../assets/textures/plain-bg.jpg"
       }
     ],
@@ -39,7 +32,7 @@
         "geometryConfig": {
           "scale": 1
         },
-        "position": { "x": 0, "y": -20, "z": -20 },
+        "position": { "x": -100, "y": 0, "z": -20 },
         "rotation": { "x": 0, "y": 0, "z": -0 },
         "materialId": "morphing-material"
       }
@@ -55,25 +48,24 @@
           "repeatAnimation": true,
           "animationLoopConfig": []
         }
-      }
-    ],
-    "lightConfig": [
-      {
-        "name": "ambient-light",
-        "lightType": "AMBIENT",
-        "props": { "intensity": 1.0 }
       },
       {
-        "name": "point-light",
-        "lightType": "POINT_LIGHT",
-        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
-      },
-      {
-        "name": "point-lightd",
-        "lightType": "DIRECTIONAL_LIGHT",
-        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+        "animationId": "vid-move",
+        "targetIdentifier": "geometry-2",
+        "animationFunctionType": "ALL",
+        "animationProperties": {
+          "animationType": "MOVE",
+          "speed": 0.008,
+          "rotationAxis": "Z",
+          "animationDurationMilis": 8500,
+          "animationPauseMilis": -1,
+          "repeatAnimation": true,
+          "moveTo": { "x": 0, "y": 0, "z": 0 },
+          "moveFrom": { "x": 0, "y": 0, "z": 0 }
+        }
       }
     ],
+
     "globalMaterialConfigs": [
       {
         "id": "morphing-material",
@@ -87,7 +79,7 @@
             "defaultUniforms": [],
             "customUniforms": [
               { "id": "uRandom", "valueType": "FLOAT", "value": 1.0 },
-              { "id": "uSize", "valueType": "FLOAT", "value": 22.5 },
+              { "id": "uSize", "valueType": "FLOAT", "value": 30.5 },
               { "id": "uDepth", "valueType": "FLOAT", "value": 1.0 },
               { "id": "uTextureSize", "valueType": "VEC2" },
               { "id": "uTexture", "valueType": "SAMPLER2D" },
@@ -110,14 +102,14 @@
             {
               "effectType": "POINT_MATERIAL",
               "effectProps": {
-                "pointDisplayPercentage": 0.02,
+                "pointDisplayPercentage": 0.12,
                 "pointTextures": [
                   { "id": "uTexture1", "pointColor": "##00a6ff" },
                   { "id": "uTexture2", "pointColor": "#00a6ff" }
                 ],
                 "pointColor": "#ffffff",
                 "defaultColor": "#00a6ff",
-
+                "effectType": "PIXEL_COLOR",
                 "effectProps": {}
               }
             }
@@ -127,7 +119,7 @@
               "id": "pointDisplay",
               "valueType": "FLOAT",
               "assetId": "image",
-              "valueConfig": { "randomizedPercentage": 0.05 }
+              "valueConfig": { "randomizedPercentage": 0.21021 }
             },
             {
               "id": "pointIndex",
@@ -160,7 +152,7 @@
           {
             "uniform": "uTexture",
             "assetId": "image",
-            "relationship": "TEXTURE"
+            "relationship": "VIDEO_STREAM"
           },
           {
             "uniform": "uTextureSize",
@@ -183,6 +175,23 @@
       }
     ],
     "sceneComponentConfigs": [],
-    "scenePropertiesConfig": { "backgroundColor": "black" }
+    "scenePropertiesConfig": { "backgroundColor": "black" },
+    "lightConfig": [
+      {
+        "name": "ambient-light",
+        "lightType": "AMBIENT",
+        "props": { "intensity": 1.0 }
+      },
+      {
+        "name": "point-light",
+        "lightType": "POINT_LIGHT",
+        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+      },
+      {
+        "name": "point-lightd",
+        "lightType": "DIRECTIONAL_LIGHT",
+        "props": { "color": "#ffffff", "position": { "y": 100, "z": 100 } }
+      }
+    ]
   }
 ]

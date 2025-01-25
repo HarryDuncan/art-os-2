@@ -1,0 +1,15 @@
+[
+  {
+    "appendedNodes": [
+      {
+        "nodeType": "VIDEO_STREAM",
+        "id": "video-stream",
+        "props": {
+          "src": "http://127.0.0.1:8000/video_feed",
+          "meshTargetIdentifier": "geometry",
+          "uniformValue": "uTexture"
+        }
+      }
+    ]
+  }
+]

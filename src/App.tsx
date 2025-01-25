@@ -11,7 +11,6 @@ import { GlobalStyle, THEME } from "theme";
 import { ThemeProvider } from "styled-components";
 import { ViewScene } from "views/view-scene-view/ViewScene";
 import { InteractiveView } from "views/interactive-view/InteractiveView";
-import { VideoStream } from "components/video-stream/VideoStream";
 
 const App = () => {
   return (
@@ -37,7 +36,6 @@ const AppContent = () => {
           <Route path="/view-scene" element={<ViewScene />} />
           <Route path="/asset-editor" element={<GeometryPreprocess />} />
         </Routes>
-        <VideoStream />
       </Container>
     </Router>
   );

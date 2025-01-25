@@ -1,21 +1,29 @@
-import { SceneNode, useAssets, useSceneData } from "art-os-package";
+import {
+  AppendedNodes,
+  SceneNode,
+  useAssets,
+  useSceneData,
+} from "art-os-package";
 import { SceneConfig } from "art-os-package/src/config/config.types";
 import { VIEW_TYPES } from "consts/views.consts";
 import { useLoadSceneConfig } from "hooks/useLoadSceneConfig";
 import { ViewToolBar } from "views/components/view-toolbar/ViewToolBar";
+import { InteractiveViewToolbar } from "./InteractiveViewToolbar";
 
 const TAG_FILTERS = ["INTERACTIVE"];
 export const InteractiveView = () => {
-  const { sceneConfig, isPlaying } = useLoadSceneConfig(VIEW_TYPES.INTERACTIVE);
+  const { sceneConfig, isPlaying, interactionConfig } = useLoadSceneConfig(
+    VIEW_TYPES.INTERACTIVE
+  );
 
   return (
     <div className="view-container">
-      <ViewToolBar
-        viewId={VIEW_TYPES.INTERACTIVE}
-        configTagFilters={TAG_FILTERS}
-      />
+      <InteractiveViewToolbar />
       {sceneConfig && isPlaying && (
-        <InteractiveViewContent sceneConfig={sceneConfig} />
+        <InteractiveViewContent
+          sceneConfig={sceneConfig}
+          interactionConfig={interactionConfig}
+        />
       )}
     </div>
   );
@@ -23,9 +31,13 @@ export const InteractiveView = () => {
 
 interface InteractiveViewProps {
   sceneConfig: SceneConfig;
+  interactionConfig: any;
 }
 
-const InteractiveViewContent = ({ sceneConfig }: InteractiveViewProps) => {
+const InteractiveViewContent = ({
+  sceneConfig,
+  interactionConfig,
+}: InteractiveViewProps) => {
   const { areAssetsInitialized, initializedAssets } = useAssets(
     sceneConfig.assets
   );
@@ -34,11 +46,17 @@ const InteractiveViewContent = ({ sceneConfig }: InteractiveViewProps) => {
     initializedAssets,
     areAssetsInitialized
   );
-
+  // TODO - start interactive processes
+  console.log(interactionConfig);
   return (
     <div>
       {sceneData && areAssetsInitialized && (
-        <SceneNode sceneData={sceneData} events={[]} interactionEvents={[]} />
+        <SceneNode
+          sceneData={sceneData}
+          events={[]}
+          interactionEvents={[]}
+          appendedNodes={interactionConfig?.appendedNodes ?? []}
+        />
       )}
       <div id="append-container" />
     </div>

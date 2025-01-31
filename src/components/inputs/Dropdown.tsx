@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { ComboboxItem, Select } from "@mantine/core";
+import { ComboboxData, ComboboxItem, Select } from "@mantine/core";
 import { InputProps } from "./inputs.types";
 
 interface DropdownProps extends InputProps {
-  data: string[];
+  data: ComboboxData;
   onChange: (value: string | null, option: ComboboxItem) => void;
   placeholder?: string;
   classNames?: string;

@@ -1,16 +1,15 @@
 import { useKeyListener, WindowStateProvider } from "art-os-package";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { ViewWrapper } from "views/components/view-wrapper/ViewWrapper";
-import { KEYS, VIEW_TYPES } from "consts/views.consts";
+import { KEYS } from "consts/views.consts";
 import { Container } from "views/Container";
 import { useCallback } from "react";
 import { AppProvider, useAppContext } from "context/app.context";
-import { GeometryPreprocess } from "views/asset-editor/GeometryPreprocess";
 import { VideoFilter } from "views/video-filter-view/VideoFilter";
 import { GlobalStyle, THEME } from "theme";
 import { ThemeProvider } from "styled-components";
 import { ViewScene } from "views/view-scene-view/ViewScene";
 import { InteractiveView } from "views/interactive-view/InteractiveView";
+import { AssetEditor } from "views/asset-editor/AssetEditor";
 
 const App = () => {
   return (
@@ -34,7 +33,7 @@ const AppContent = () => {
           <Route path="/interactive" element={<InteractiveView />} />
           <Route path="/video-filter" element={<VideoFilter />} />
           <Route path="/view-scene" element={<ViewScene />} />
-          <Route path="/asset-editor" element={<GeometryPreprocess />} />
+          <Route path="/asset-editor" element={<AssetEditor />} />
         </Routes>
       </Container>
     </Router>

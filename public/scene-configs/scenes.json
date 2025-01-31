@@ -20,6 +20,11 @@
     "tags": ["INTERACTIVE"]
   },
   {
+    "url": "scene-configs/installations/reflect-hope.json",
+    "label": "Reflect Hope",
+    "tags": ["INTERACTIVE"]
+  },
+  {
     "url": "scene-configs/scenes/morph.json",
     "label": "Model Morph"
   }

@@ -1,5 +1,6 @@
 [
   {
+    "title": "Demo Swirl",
     "sceneConfigType": "Master",
     "threeJsConfig": {
       "camera": { "position": { "x": 0, "y": 4, "z": 450 } }
@@ -38,7 +39,7 @@
         "geometryConfig": {
           "scale": 1
         },
-        "position": { "x": -80, "y": 100, "z": -20 },
+        "position": { "x": -100, "y": 0, "z": -20 },
         "rotation": { "x": 0, "y": 0, "z": -0 },
         "materialId": "morphing-material"
       }
@@ -70,7 +71,7 @@
             "defaultUniforms": [],
             "customUniforms": [
               { "id": "uRandom", "valueType": "FLOAT", "value": 1.0 },
-              { "id": "uSize", "valueType": "FLOAT", "value": 50.5 },
+              { "id": "uSize", "valueType": "FLOAT", "value": 40.5 },
               { "id": "uDepth", "valueType": "FLOAT", "value": 1.0 },
               { "id": "uTextureSize", "valueType": "VEC2" },
               { "id": "uTexture", "valueType": "SAMPLER2D" },
@@ -81,6 +82,12 @@
             {
               "effectType": "POINTS",
               "effectProps": {}
+            },
+            {
+              "effectType": "VERTEX_IMAGE_EFFECT",
+              "effectProps": {
+                "effectType": "IMAGE_AS_POINTS"
+              }
             },
             {
               "effectType": "VERTEX_IMAGE_EFFECT",
@@ -114,7 +121,7 @@
               "id": "pointDisplay",
               "valueType": "FLOAT",
               "assetId": "image",
-              "valueConfig": { "randomizedPercentage": 0.0411021 }
+              "valueConfig": { "randomizedPercentage": 0.0511021 }
             },
             {
               "id": "pointIndex",

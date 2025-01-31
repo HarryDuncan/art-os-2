@@ -7,27 +7,27 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/jason.glb",
+        "path": "../assets/models/jason.glb",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
       },
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       },
@@ -35,13 +35,13 @@
         "assetType": "TEXTURE",
         "id": "image",
         "name": "image",
-        "url": "../assets/textures/bg.jpg"
+        "path": "../assets/textures/bg.jpg"
       },
       {
         "assetType": "VIDEO",
         "id": "video",
         "name": "video",
-        "url": "../assets/video/algo.mp4"
+        "path": "../assets/video/algo.mp4"
       }
     ],
     "meshComponentConfigs": [
@@ -234,27 +234,27 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/jason.glb",
+        "path": "../assets/models/jason.glb",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
       },
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       },
@@ -262,13 +262,13 @@
         "assetType": "TEXTURE",
         "id": "image",
         "name": "image",
-        "url": "../assets/textures/bg.jpg"
+        "path": "../assets/textures/bg.jpg"
       },
       {
         "assetType": "VIDEO",
         "id": "video",
         "name": "video",
-        "url": "../assets/video/algo.mp4"
+        "path": "../assets/video/algo.mp4"
       }
     ],
     "meshComponentConfigs": [
@@ -580,26 +580,26 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/jason-3.obj",
+        "path": "../assets/models/jason-3.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
       {
         "name": "geometry-1",
-        "url": "../assets/models/side-obj.obj",
+        "path": "../assets/models/side-obj.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       },
@@ -607,7 +607,7 @@
         "assetType": "VIDEO",
         "id": "video",
         "name": "video",
-        "url": "../assets/video/algo.mp4"
+        "path": "../assets/video/algo.mp4"
       }
     ],
     "meshComponentConfigs": [
@@ -976,26 +976,26 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/jason-2.obj",
+        "path": "../assets/models/jason-2.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
       {
         "name": "geometry-1",
-        "url": "../assets/models/center-obj-2.obj",
+        "path": "../assets/models/center-obj-2.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       }
@@ -1247,27 +1247,27 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/simplified_output.obj",
+        "path": "../assets/models/simplified_output.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/shifted_image_3.jpg",
+        "path": "../assets/textures/matcaps/shifted_image_3.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
       },
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       }
@@ -1488,27 +1488,27 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/simplified_output.obj",
+        "path": "../assets/models/simplified_output.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
       },
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       }
@@ -1833,27 +1833,27 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/jason.glb",
+        "path": "../assets/models/jason.glb",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/shifted_image_3.jpg",
+        "path": "../assets/textures/matcaps/shifted_image_3.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
       },
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       }
@@ -2031,27 +2031,27 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/simplified_output.obj",
+        "path": "../assets/models/simplified_output.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur-2.jpg",
+        "path": "../assets/textures/matcaps/neon-blur-2.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
       },
       {
         "name": "1-texture",
-        "url": "../assets/textures/point-textures/1.png",
+        "path": "../assets/textures/point-textures/1.png",
         "assetType": "TEXTURE",
         "id": "1-texture"
       },
       {
         "name": "0-texture",
-        "url": "../assets/textures/point-textures/0.png",
+        "path": "../assets/textures/point-textures/0.png",
         "assetType": "TEXTURE",
         "id": "0-texture"
       }

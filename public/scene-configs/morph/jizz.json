@@ -8,19 +8,19 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/barba-geom.obj",
+        "path": "../assets/models/barba-geom.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
       {
         "name": "geometry-2",
-        "url": "../assets/models/jizz-geom.obj",
+        "path": "../assets/models/jizz-geom.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry-2"
       },
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
@@ -189,13 +189,13 @@
     "assets": [
       {
         "name": "geometry-2",
-        "url": "../assets/models/jizz.obj",
+        "path": "../assets/models/jizz.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry-2"
       },
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
@@ -344,14 +344,14 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/barba.obj",
+        "path": "../assets/models/barba.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]
@@ -497,14 +497,14 @@
     "assets": [
       {
         "name": "geometry-1",
-        "url": "../assets/models/barba-geom.obj",
+        "path": "../assets/models/barba-geom.obj",
         "assetType": "MODEL3D",
         "id": "main-geometry"
       },
 
       {
         "name": "chrome-material",
-        "url": "../assets/textures/matcaps/neon-blur.jpg",
+        "path": "../assets/textures/matcaps/neon-blur.jpg",
         "assetType": "TEXTURE",
         "id": "chrome-material",
         "assetTag": ["MATCAP"]

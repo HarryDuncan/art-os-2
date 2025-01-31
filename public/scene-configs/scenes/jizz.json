@@ -8,7 +8,7 @@
     "assets": [
       {
         "name": "sperm-texture",
-        "url": "../assets/textures/point-textures/sperm.png",
+        "path": "../assets/textures/point-textures/sperm.png",
         "assetType": "TEXTURE",
         "id": "sperm-texture"
       },
@@ -17,13 +17,13 @@
         "assetType": "TEXTURE",
         "id": "image",
         "name": "image",
-        "url": "../assets/textures/plain-bg.jpg"
+        "path": "../assets/textures/plain-bg.jpg"
       },
       {
         "assetType": "VIDEO",
         "id": "video",
         "name": "video",
-        "url": "../assets/video/forest.mp4"
+        "path": "../assets/video/forest.mp4"
       }
     ],
     "meshComponentConfigs": [
@@ -184,7 +184,7 @@
     "assets": [
       {
         "name": "sperm-texture",
-        "url": "../assets/textures/point-textures/sperm.png",
+        "path": "../assets/textures/point-textures/sperm.png",
         "assetType": "TEXTURE",
         "id": "sperm-texture"
       },
@@ -193,13 +193,13 @@
         "assetType": "TEXTURE",
         "id": "image",
         "name": "image",
-        "url": "../assets/textures/plain-bg.jpg"
+        "path": "../assets/textures/plain-bg.jpg"
       },
       {
         "assetType": "VIDEO",
         "id": "video",
         "name": "video",
-        "url": "../assets/video/forest.mp4"
+        "path": "../assets/video/forest.mp4"
       }
     ],
     "meshComponentConfigs": [

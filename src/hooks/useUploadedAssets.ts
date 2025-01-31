@@ -23,7 +23,7 @@ export const useUploadedAssets = (
           } else {
             return {
               ...asset,
-              url: selectedAsset.replace(PROJECT_ROOT, ""),
+              path: selectedAsset.replace(PROJECT_ROOT, ""),
             };
           }
         }

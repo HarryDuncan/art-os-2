@@ -5,10 +5,10 @@ interface PlayPauseButtonProps {
   viewId: string;
 }
 export const PlayPauseButton = ({ viewId }: PlayPauseButtonProps) => {
-  const togglePlayPause = useTogglePlayPause(viewId);
+  const { toggleCallback, isPlaying } = useTogglePlayPause(viewId);
   return (
     <TopBarItem>
-      <button onClick={togglePlayPause}>Play or pause</button>
+      <button onClick={toggleCallback}>{isPlaying ? "Pause" : "Play"}</button>
     </TopBarItem>
   );
 };

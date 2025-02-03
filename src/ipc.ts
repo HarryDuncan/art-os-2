@@ -1,6 +1,6 @@
 // @ts-nocheck
-export const sendMessage = (message) => {
-  window.electronAPI?.sendMessage(message);
+export const sendMessage = async (message) => {
+  return await window.electronAPI?.sendMessage(message);
 };
 
 export const onMessage = (

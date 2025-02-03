@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useViewState } from "./useViewState";
 import { useSelectedSceneConfig } from "./useSelectedSceneConfig";
 import { useUploadedAssets } from "./useUploadedAssets";
+import { useInteractionConfig } from "./scene-configs/useInteractionConfig";
 
 export const useLoadSceneConfig = (viewId: string) => {
   const {
@@ -14,7 +15,7 @@ export const useLoadSceneConfig = (viewId: string) => {
   } = useViewState(viewId);
   const { dispatch } = useAppContext();
   const sceneConfig = useFetchConfig(selectedSceneConfigUrl);
-  const interactionConfig = useFetchConfig(selectedInteractionConfigUrl);
+
   useEffect(() => {
     if (sceneConfig) {
       const configLength = sceneConfig.length;
@@ -31,17 +32,16 @@ export const useLoadSceneConfig = (viewId: string) => {
   const selectedSceneConfig = useSelectedSceneConfig(viewId);
 
   // TODO - allow for multiple selections of interaction configs
-  const selectedInteractionConfig = interactionConfig
-    ? interactionConfig[0]
-    : null;
+
   const configWithUploadedAssets = useUploadedAssets(
     selectedSceneConfig,
     uploadedAssets
   );
-
+  const { formattedInteractionConfig, areProcessesReady } =
+    useInteractionConfig(selectedInteractionConfigUrl);
   return {
     sceneConfig: configWithUploadedAssets,
     isPlaying,
-    interactionConfig: selectedInteractionConfig,
+    interactionConfig: formattedInteractionConfig,
   };
 };

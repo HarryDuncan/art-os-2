@@ -7,7 +7,7 @@ import {
 import { SceneConfig } from "art-os-package/src/config/config.types";
 import { VIEW_TYPES } from "consts/views.consts";
 import { useLoadSceneConfig } from "hooks/useLoadSceneConfig";
-import { ViewToolBar } from "views/components/view-toolbar/ViewToolBar";
+
 import { InteractiveViewToolbar } from "./InteractiveViewToolbar";
 
 const TAG_FILTERS = ["INTERACTIVE"];
@@ -46,6 +46,7 @@ const InteractiveViewContent = ({
     initializedAssets,
     areAssetsInitialized
   );
+
   // TODO - start interactive processes
   console.log(interactionConfig);
   return (

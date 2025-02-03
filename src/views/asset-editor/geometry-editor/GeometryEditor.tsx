@@ -18,6 +18,7 @@ export const GeometryEditor = () => {
     dispatch,
     state: { assets },
   } = useAssetEditorContext();
+
   const updateAddedAssets = useCallback(
     (updatedAssets) => {
       dispatch({
@@ -29,13 +30,14 @@ export const GeometryEditor = () => {
   );
   const performFunction = useCallback(
     (id) => {
-      const message = { id, assets };
+      const message = { url: "process_command", data: { command: id, assets } };
+      console.log(message);
       sendMessage(message);
     },
-    [assets]
+    [assets, sendMessage]
   );
 
-  const canPerformFunction = useMemo(() => assets.length > 0, [assets]);
+  const assetFunctionsEnabled = useMemo(() => assets.length > 0, [assets]);
   return (
     <div className="view-container">
       <h1>Geometry Editor</h1>
@@ -43,8 +45,8 @@ export const GeometryEditor = () => {
       <EditorToolBar>
         {PROGRAMS.map(({ id, label }) => (
           <Button
-            key={id}
-            disabled={canPerformFunction}
+            key={`${id}-${assetFunctionsEnabled}`}
+            disabled={!assetFunctionsEnabled}
             onClick={() => performFunction(id)}
           >
             {label}

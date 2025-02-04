@@ -4,4 +4,4 @@
 /public/assets/models/**
 /public/assets/textures/** 
 /public/assets/video/**
-flask_logs.txt
+**/flask_logs.txt

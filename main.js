@@ -90,8 +90,7 @@ app.on("window-all-closed", () => {
 
 ipcMain.handle("ipc-to-flask-message", async (_, payload) => {
   const { url, data } = payload;
-  console.log(`${url}`);
-  console.log(data);
+
   try {
     const response = await fetch(`http://127.0.0.1:5000/${url}`, {
       method: "POST",
@@ -99,7 +98,6 @@ ipcMain.handle("ipc-to-flask-message", async (_, payload) => {
       body: JSON.stringify(data),
     });
 
-    console.log(response);
     const res = await response.json();
     console.log(res);
     return res;

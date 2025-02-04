@@ -1,0 +1,84 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [03/Feb/2025 18:44:53] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:18:57] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:01] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:10] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:11] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:11] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:11] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:11] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:11] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:19:48] "[33mGET / HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+DEBUG:root:Command: sameVerticies, Data: {}
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:20:20] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\same_vertices.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\same_vertices.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat

@@ -31,7 +31,6 @@ export const GeometryEditor = () => {
   const performFunction = useCallback(
     (id) => {
       const message = { url: "process_command", data: { command: id, assets } };
-      console.log(message);
       sendMessage(message);
     },
     [assets, sendMessage]

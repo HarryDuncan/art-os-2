@@ -82,3 +82,159 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 159-298-352
 INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 06:34:53] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 07:18:38] "[33mGET / HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 08:12:41] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 08:44:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 08:41:37] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\same_vertices.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 08:59:36] "[35m[1mPOST /process_command HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:17:14] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:18:57] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:19:33] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\same_vertices.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:21:01] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:22:14] "[35m[1mPOST /process_command HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\geometry_editing\\simplify_object.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:24:33] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:trimesh:Exporting 44543 faces as OBJ
+DEBUG:trimesh:Exporting 38758 faces as OBJ
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:24:37] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:trimesh:Exporting 44543 faces as OBJ
+DEBUG:trimesh:Exporting 38758 faces as OBJ
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 09:25:22] "POST /process_command HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug:127.0.0.1 - - [09/Feb/2025 11:13:16] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Feb/2025 12:48:40] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\interaction_node\\interaction_node.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\interaction_node\\interaction_node.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\interaction_node\\mask\\mask.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\interaction_node\\mask\\mask.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\interaction_node\\interaction_node.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat

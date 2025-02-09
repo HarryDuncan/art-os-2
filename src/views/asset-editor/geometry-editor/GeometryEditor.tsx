@@ -2,16 +2,14 @@ import { Button } from "@mantine/core";
 import { AdvancedAssetSelector } from "../components/advanced-asset-selector/AdvancedAssetSelector";
 import { EditorToolBar } from "../components/editor-toolbar/EditorToolbar";
 import { useCallback, useMemo } from "react";
-import { useAssetEditorContext } from "../context/assetEditor.context";
-import { Asset } from "art-os-package/src/assets/asset.types";
 import { EDITOR_VIEWS } from "../assetEditor.consts";
 import { sendMessage } from "ipc";
+import { useAssetEditorContext } from "../context/assetEditor.context";
 
-const preTransformConfig = {
-  centerGeometry: true,
-};
-
-const PROGRAMS = [{ id: "sameVerticies", label: "Same Vertices" }];
+const PROGRAMS = [
+  { id: "sameVerticies", label: "Same Vertices" },
+  { id: "simplifyMesh", label: "Simplify Mesh" },
+];
 
 export const GeometryEditor = () => {
   const {

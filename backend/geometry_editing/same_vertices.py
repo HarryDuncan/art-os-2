@@ -28,10 +28,8 @@ def save_mesh(mesh, output_path):
     mesh.export(output_path)
 
 def same_vertices(input_files, output_dir):
-    print(input_files)
     meshes = [load_mesh(file) for file in input_files]
     max_vertex_count = max(get_vertex_count(mesh) for mesh in meshes)
-    print(max_vertex_count)
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     
@@ -40,6 +38,7 @@ def same_vertices(input_files, output_dir):
         save_mesh(updated_mesh, output_dir / Path(file).name)
     
     print("All models now have the same vertex count.")
+    return 'same vertices complete'
 
 
 

@@ -1,44 +1,40 @@
-
-# ALGOS
-from .detection.bodypix import BodyPix
-from .detection.posenet import Posenet
-
-class InteractionNode():
+from mask.mask import MaskProcessor
+class InteractionNode:
     def __init__(self):
-        self.currentAlgorithm = None
-        self.isRunning = False
+        self.current_algorithm = None
+        self.is_running = False
 
-    def InitializeInteractionNode(self):
-        self.isRunning = False
-        if self.currentAlgorithm != None:
-            self.currentAlgorithm.stop_running()
+    def initialize_interaction_node(self):
+        self.is_running = False
+        if self.current_algorithm is not None:
+            self.current_algorithm.stop_running()
         return True
 
-    def StopAlgorithm(self):
-        self.isRunning = False
-        if self.currentAlgorithm != None:
-            self.currentAlgorithm.stop_running()
+    def stop_algorithm(self):
+        self.is_running = False
+        if self.current_algorithm is not None:
+            self.current_algorithm.stop_running()
         return True
-    
-    def InitializeAlgorithm(self, request):
-        if self.isRunning == False:
-            if(request.algorithm_type == "POSENET"):
-                self.currentAlgorithm = Posenet()
-            if(request.algorithm_type == "BODYPIX"):
-                self.currentAlgorithm = BodyPix()
-        if self.currentAlgorithm != None:
-            self.currentAlgorithm.set_config(request.algorithm_config)
-        return self.currentAlgorithm != None
 
-    def RunAlgorithm(self):
-        if(self.currentAlgorithm != None):
-            if(self.isRunning == False):
-                self.currentAlgorithm.run_algorithm()
-                self.isRunning = True
-            while self.isRunning == True:
-                coords = self.currentAlgorithm.get_smoothed_cluster_coords()
-               
-        else:
-            return print(f"error running current algorithm not initialized", flush=True)
+    def initialize_algorithm(self, algorithm_type, algorithm_config):
+        if not self.is_running:
+            match algorithm_type:
+                case 'MASK':
+                    self.current_algorithm = MaskProcessor()
+                case _:
+                    self.current_algorithm = None
+        if self.current_algorithm is not None:
+            self.current_algorithm.set_config(algorithm_config)
+        return self.current_algorithm is not None
 
-    
+    def run_algorithm(self):
+        if self.current_algorithm is None:
+            print("Error: running current algorithm not initialized", flush=True)
+            return
+        
+        if not self.is_running:
+            self.current_algorithm.run_algorithm()
+            self.is_running = True
+        
+        while self.is_running:
+            coords = self.current_algorithm.get_smoothed_cluster_coords()

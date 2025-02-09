@@ -75,3 +75,22 @@ INFO:trimesh:triangulating faces
 INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:29:14] "[35m[1mPOST /process_command HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\harry\\Projects\\art-os-2\\backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 159-298-352
+INFO:root:Received command request
+DEBUG:trimesh:unable to load materials from: barba-logo.mtl
+INFO:trimesh:triangulating faces
+DEBUG:trimesh:Exporting 77970 faces as OBJ
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:31:36] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:trimesh:unable to load materials from: barba-logo.mtl
+INFO:trimesh:triangulating faces
+DEBUG:trimesh:Exporting 77970 faces as OBJ
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:32:00] "POST /process_command HTTP/1.1" 200 -
+INFO:root:Received command request
+DEBUG:trimesh:unable to load materials from: lotus.mtl
+INFO:trimesh:triangulating faces
+INFO:trimesh:triangulating faces
+DEBUG:trimesh:Exporting 99576 faces as OBJ
+DEBUG:trimesh:Exporting 118018 faces as OBJ
+INFO:werkzeug:127.0.0.1 - - [04/Feb/2025 14:32:55] "POST /process_command HTTP/1.1" 200 -

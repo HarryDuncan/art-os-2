@@ -27,5 +27,9 @@
   {
     "url": "scene-configs/scenes/morph.json",
     "label": "Model Morph"
+  },
+  {
+    "url": "scene-configs/scenes/ai-beauty.json",
+    "label": "AI Beauty"
   }
 ]
